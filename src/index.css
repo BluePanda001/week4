@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:url(/img/images.jpg) no-repeat;
+  background-size:100%;
+  background-color:white;
+  min-height:100%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img {
+  width: 100%;
+ height: auto;
+}
+
+html{
+  min-height: 100%;
+}
+form{
+  padding:30px;
+  margin-top:40px;
+}
+form button, form h5{
+  margin:20px 0;
+}
+/* code to make the line in the forms appear blue instead of green */
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materlialize-textarea:focus:not([readonly]){
+  border-color:rgb(123, 196, 245);
+  box-shadow:none;
+}
+
+
