@@ -24,21 +24,22 @@ class SignUp extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sign Up</h5>
+                    <h5 className="grey-text text-darken-3 centre"><strong>Welcome New User,</strong></h5>
+                    <h6 className="grey-text text-darken-1 centre">Sign up to continue</h6>
                     <div className="input-field">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"><strong>Email</strong></label>
                         <input type="email" id="email" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="password">password</label>
+                        <label htmlFor="password"><strong>Password</strong></label>
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="firstName">First Name</label>
+                        <label htmlFor="firstName"><strong>First Name</strong></label>
                         <input type="text" id="firstName" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="lastName">Last Name</label>
+                        <label htmlFor="lastName"><strong>Last Name</strong></label>
                         <input type="text" id="lastName" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">

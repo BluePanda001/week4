@@ -10,20 +10,41 @@ import { render } from 'react-dom';
 import pic from './1.jpg'
 //const PropertyDetails=(props)=>
 class PropertyDetails extends Component{   
+
+    state = {        
+        property: [],
+        error: null
+      }
+
+    fetchProperty(){
+        fetch()
+        .then(response => response.json())
+        .then(
+            data =>
+              this.setState({
+                property: data,                
+              })
+          )
+        .catch(error => this.setState({error}));
+    }  
     handleSubmit=(e)=>{
         e.preventDefault();
         console.log(this.state);
+        componentDidMount() {
+            this.fetchProperty();
+          }
     }   
     
     render(){  
-    return(            
+    return(   
+                
         <div className="row">
                 <div className="col s15 m8">
                     <div className="container section project-details">
                         <div className="card z-depth-0">
                             <div className="card-content">
                                 <span className="card-title"></span>
-                                {/* this has hard coded data, as the project is not linked to a databse yet */}
+                                {/* this has to be hard coded data, as the project is not linked to a databse yet */}
                                 <h5 className='red-text'>R 10 million </h5>
                                 <h5 className='blue-text'>Constantia </h5>
                                 <img src={pic} alt=""/>
@@ -43,7 +64,7 @@ class PropertyDetails extends Component{
                         <div className="card z-depth-0 ">
                             <div className=" form card-content">
                                 <form onSubmit={this.handleSubmit} className="white">
-                                    <h5 className="grey-text text-darken-3">Contact </h5>
+                                    <h5 className="grey-text text-darken-3">Contact Us</h5>
                                     <div className="input-field">
                                         <label htmlFor="email">Your Email</label>
                                         <input type="email" id="email" />

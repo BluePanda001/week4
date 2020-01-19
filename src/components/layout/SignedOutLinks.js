@@ -6,6 +6,7 @@ const SignedOutLinks =()=>{
        <ul className="right">
            <li><NavLink to='/signup' className="red-text"> <strong>Signup</strong></NavLink></li>
            <li><NavLink to='/signin' className="blue-text"><strong>Login</strong></NavLink></li>
+           
        </ul>
     )
 }
